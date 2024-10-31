@@ -1,0 +1,12 @@
+[Unit]
+Description=Read Modbus Server Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Restart=on-failure
+RestartSec=5s
+ExecStart=/home/recomputer/sensecraft/readModbus
+ExecReload=/home/recomputer/sensecraft/readModbus
+WantedBy=multi-user.target
